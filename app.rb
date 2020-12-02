@@ -40,5 +40,6 @@ class App < Sinatra::Base
     elsif params[:operation] == "divide"
       @quotient = num1 / num2
       "#{@quotient}"
+    end
   end
 end
