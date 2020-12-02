@@ -28,8 +28,17 @@ class App < Sinatra::Base
     num1 = params[:number1].to_i
     num2 = params[:number2].to_i
 
-    if params[:operation] == add
+    if params[:operation] == "add"
       @sum = num1 + num2
       "#{@sum}"
+    elsif params[:operation] == "subtract"
+      @difference = num1 - num2
+      "#{@difference}"
+    elsif params[:operation] == "multiply"
+      @product = num1 * num2
+      "#{@product}"
+    elsif params[:operation] == "divide"
+      @quotient = num1 / num2
+      "#{@quotient}"
   end
 end
